@@ -36,7 +36,6 @@ module.exports = {
             const pilihan = interaction.options.getString('name');
             try {
                 const tokenData = await getNewAccessToken();
-                console.log(tokenData.access_token);
                 const response = await axios.get(
                     `${SPOTIFY_API_BASE_URL}/search?q=${encodeURIComponent(pilihan)}&type=track`,
                     {
